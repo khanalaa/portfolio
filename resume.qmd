@@ -1,89 +1,62 @@
 ---
-layout: cv
-title: Isaac Newtons's CV
+layout: resume
+title: Aayush Khanal's Resume
 ---
-# Isaac Newton
-Physicist, Mathematician, Cambridge professor.
 
 <div id="webaddress">
-<a href="isaac@applesdofall.org">isaac@applesdofall.org</a>
-| <a href="http://en.wikipedia.org/wiki/Isaac_Newton">My wikipedia page</a>
+<a href="datascience@byui.edu">khanalaa@byui.edu</a>
+| <a href="https://khanalaa.github.io/ds250_portfolio/">Data Science Program</a>
+| <a href="www.linkedin.com/in/aayushkhanal">Linkedin</a>
 </div>
 
-
-## Currently
-
-Standing on the shoulders of giants
-
-### Specialized in
-
-Laws of motion, gravitation, minting coins, disliking [Robert Hooke](http://en.wikipedia.org/wiki/Robert_Hooke)
-
-
-### Research interests
-
-Cooling, power series, optics, alchemy, planetary motions, apples.
-
+<!-- https://www.monique.tech/the-art-of-markdown -->
 
 ## Education
 
-`1654-1660`
-__The King's School, Grantham.__
+`Expected 2026`
+**Brigham Young University - Idaho**, Rexburg, ID
 
-`June 1661 - now`
-__Trinity College, Cambridge__
+- 4.0 Major GPA
 
-- Sizar
+## Relavant courses
+Intro to Programming, Discrete Mathematics, Intro to Databases, Intro to Cybersecurity, Technical Teamwork
+Data Science Programming, Programming with Functions and Classes, Javascript, Computer Systems, Algoritmic Thinking
 
-`1667 - death`
-__Trinity College, Cambridge__
+## Experience
+`Sept 2023 - Dec 2023`
+Hart Night Custodian | Brigham Young University-Idaho | Rexburg, Idaho
 
-- Fellow
+- Orchestrated nightly custodial responsibilities across 13 specific areas, uniting efforts to uphold cleanliness and hygiene standards, fostering a comfortable and healthy environment through teamwork.
+- Spearheaded team to surpass cleaning goals, achieving a 18% efficiency boost.
+- Demonstrated proactive initiative by strictly adhering to safety protocols, resulting in two consecutive accident-free months, ensuring well-being of all team members
 
+`Oct 2022 - May 2023`
+Librarian | University of Louisiana Monroe | Monroe, Louisiana
 
+- Managed a diverse collection of over 15 library resources, accessibility and organizational efficiency.
+- Initiated and oversaw a total of 22 library programs, led to a remarkable 18% increase in participation, engaging community in a variety of enriching activities and events.
 
-## Awards
+### Skills
+**Languages:** Python, Java.<br>
+**Web Programming:** HTML, CSS, JavaScript, React.Js, Node.Js.<br>
+**Databases:** MySQL, MongoDB.<br>
+**Others:** Git, GitHub, Linux, Microsoft Office Suite.
+ 
+### Projects
 
-`2012`
-President, *Royal Society*, London, UK
+`Oct 2023 - oct 2023`
+**Designer | My SQL Project**
 
-Associate, *French Academy of Science*, Paris, France
+- Implemented MySQL database to efficiently retrieve and organize data, boosting overall accessibility and data management.
+- Established a rigorous data update schedule, resulting in a 95% reduction in outdated information, thus improving project accuracy and relevance.
 
+`Aug 2023 - Dec 2023`
+**Designer/Developer | BYU-Idaho Apartment Website**,
 
-
-## Publications
-
-<!-- A list is also available [online](http://scholar.google.co.uk/citations?user=LTOTl0YAAAAJ) -->
-
-### Journals
-
-`1669`
-Newton Sir I, De analysi per æquationes numero terminorum infinitas. 
-
-`1669`
-Lectiones opticæ.
-
-etc. etc. etc.
-
-### Patents
-
-`2012`
-Infinitesimal calculus for solutions to physics problems, [SMBC](http://www.techdirt.com/articles/20121011/09312820678/if-patents-had-been-around-time-newton.shtml) patent 001
-
-
-## Occupation
-
-`1600`
-__Royal Mint__, London
-
-- Warden
-- Minted coins
-
-`1600`
-__Lucasian professor of Mathematics__, Cambridge University
-
+- Designed HTML/CSS website for BYU-Idaho housing options, increasing accessibility.
+- Transformed housing search platforms, enhancing way information is delivered and streamlining user experience.
 
 
 <!-- ### Footer
 
-Last updated: May 2013 -->
+Last updated: Jan 2024 -->
