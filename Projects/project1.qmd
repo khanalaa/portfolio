@@ -127,7 +127,6 @@ selected_names_data = selected_names_data[(selected_names_data['year'] >= 1920) 
 fig = px.line(selected_names_data, x='year', y='Total', color='name', title='Name Usage Comparison (1920 - 2000)')
 fig.show()
 
-
 ```
 
 
@@ -161,6 +160,17 @@ fig.update_layout(
             name='Movie Release Year'
         )
     ]
+)
+
+fig.add_annotation(
+    x=movie_release_year,
+    y=vito_data['Total'].max(),
+    text='Movie Release year \'1972\'',
+    showarrow=True,
+    arrowhead=2,
+    arrowcolor='red',
+    ax=0,
+    ay=-40
 )
 fig.show()
 
