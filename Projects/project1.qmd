@@ -1,5 +1,5 @@
 ---
-title: "Client Report Project 02"
+title: "Unveiling Historical Name Trends"
 subtitle: "Course DS 250"
 author: "Aayush Khanal"
 format:
@@ -36,7 +36,7 @@ import plotly.express as px
 
 ## Elevator pitch
 
-_The analysis of name usage trends revealed fascinating insights into the popularity of selected names over the years.Examining the historical data for names such as Mary, Martha, Peter, and Paul from 1920 to 2000 showcased distinct patterns. While Mary maintained consistent popularity, Martha experienced a decline, and Peter and Paul exhibited fluctuations. Additionally, a closer look at the name 'Vito' aligned with the release of the movie "The Godfather" in 1972, indicating a notable surge in popularity around that time. _
+_The analysis of name usage trends revealed fascinating insights into the popularity of selected names over the years. Examining the historical data for names such as Mary, Martha, Peter, and Paul from 1920 to 2000 showcased distinct patterns. While Mary maintained consistent popularity, Martha experienced a decline, and Peter and Paul exhibited fluctuations. Additionally, a closer look at the name 'Vito' aligned with the release of the movie "The Godfather" in 1972, indicating a notable surge in popularity around that time. _
 
 ```{python}
 #| label: project data
@@ -136,7 +136,7 @@ fig.show()
 
 __Think of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?__
 
-_ _
+_One of the characters in the 1972 film "The Godfather" was called Vito. There were __ persons named Vito in 19__. But by 1940, things had drastically changed, and the data had reached ____. In 1972, this name was only used by __.  Vito's name began to progressively fade after the film's release. _
 
 ```{python}
 #| label: Q4
