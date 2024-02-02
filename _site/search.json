@@ -99,9 +99,9 @@
   {
     "objectID": "Projects/project1.html",
     "href": "Projects/project1.html",
-    "title": "Client Report Project 02",
+    "title": "Unveiling Historical Name Trends",
     "section": "",
-    "text": "The analysis of name usage trends revealed fascinating insights into the popularity of selected names over the years.Examining the historical data for names such as Mary, Martha, Peter, and Paul from 1920 to 2000 showcased distinct patterns. While Mary maintained consistent popularity, Martha experienced a decline, and Peter and Paul exhibited fluctuations. Additionally, a closer look at the name ‘Vito’ aligned with the release of the movie “The Godfather” in 1972, indicating a notable surge in popularity around that time. \n\n\nRead and format project data\n# Include and execute your code here\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byuidatascience/data4names/master/data-raw/names_year/names_year.csv\")",
+    "text": "The analysis of name usage trends revealed fascinating insights into the popularity of selected names over the years. Examining the historical data for names such as Mary, Martha, Peter, and Paul from 1920 to 2000 showcased distinct patterns. While Mary maintained consistent popularity, Martha experienced a decline, and Peter and Paul exhibited fluctuations. Additionally, a closer look at the name ‘Vito’ aligned with the release of the movie “The Godfather” in 1972, indicating a notable surge in popularity around that time. \n\n\nRead and format project data\n# Include and execute your code here\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byuidatascience/data4names/master/data-raw/names_year/names_year.csv\")",
     "crumbs": [
       "DS250 Projects",
       "Project 1"
@@ -110,9 +110,9 @@
   {
     "objectID": "Projects/project1.html#elevator-pitch",
     "href": "Projects/project1.html#elevator-pitch",
-    "title": "Client Report Project 02",
+    "title": "Unveiling Historical Name Trends",
     "section": "",
-    "text": "The analysis of name usage trends revealed fascinating insights into the popularity of selected names over the years.Examining the historical data for names such as Mary, Martha, Peter, and Paul from 1920 to 2000 showcased distinct patterns. While Mary maintained consistent popularity, Martha experienced a decline, and Peter and Paul exhibited fluctuations. Additionally, a closer look at the name ‘Vito’ aligned with the release of the movie “The Godfather” in 1972, indicating a notable surge in popularity around that time. \n\n\nRead and format project data\n# Include and execute your code here\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byuidatascience/data4names/master/data-raw/names_year/names_year.csv\")",
+    "text": "The analysis of name usage trends revealed fascinating insights into the popularity of selected names over the years. Examining the historical data for names such as Mary, Martha, Peter, and Paul from 1920 to 2000 showcased distinct patterns. While Mary maintained consistent popularity, Martha experienced a decline, and Peter and Paul exhibited fluctuations. Additionally, a closer look at the name ‘Vito’ aligned with the release of the movie “The Godfather” in 1972, indicating a notable surge in popularity around that time. \n\n\nRead and format project data\n# Include and execute your code here\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byuidatascience/data4names/master/data-raw/names_year/names_year.csv\")",
     "crumbs": [
       "DS250 Projects",
       "Project 1"
@@ -121,7 +121,7 @@
   {
     "objectID": "Projects/project1.html#questiontask-1",
     "href": "Projects/project1.html#questiontask-1",
-    "title": "Client Report Project 02",
+    "title": "Unveiling Historical Name Trends",
     "section": "QUESTION|TASK 1",
     "text": "QUESTION|TASK 1\nHow does your name at your birth year compare to its use historically?\nMy name is Aayush. Because the name is well-known in other parts of the world, it sticks out. The data indicates that it hasn’t been used all that much. When I was born in 2004, there were 39 babies with the name Aayush. Although historically very few people have used the name Aayush, its use peaked in 2010 with 49 people using it. My name was not very common before 2001.\n\n\nRead and format data\n# Include and execute your code here\n# pd.unique(df.query('name == \"Aayush\"').year).size\naayush_data = df[df['name'] == 'Aayush']\n\n# Plot the historical usage of the name\nfig = px.line(aayush_data, x='year', y='Total', title='Historical Usage of the Name Aayush')\n\n# Add a vertical line for your birth year\nyour_birth_year = 2004  \nfig.add_shape(\n    dict(\n        type='line',\n        x0=your_birth_year,\n        x1=your_birth_year,\n        y0=0,\n        y1=aayush_data['Total'].max(),\n        line=dict(color='red', dash='dash'),\n        name='Your Birth Year'\n    )\n)\n\nfig.add_annotation(\n    x=your_birth_year,\n    y=aayush_data['Total'].max(),\n    text='Birth Year \\'2004\\'',\n    showarrow=True,\n    arrowhead=2,\n    arrowcolor='red',\n    ax=0,\n    ay=-40\n)\n\nfig.show()",
     "crumbs": [
@@ -132,7 +132,7 @@
   {
     "objectID": "Projects/project1.html#questiontask-2",
     "href": "Projects/project1.html#questiontask-2",
-    "title": "Client Report Project 02",
+    "title": "Unveiling Historical Name Trends",
     "section": "QUESTION|TASK 2",
     "text": "QUESTION|TASK 2\nIf you talked to someone named Brittany on the phone, what is your guess of his or her age? What ages would you not guess?\nIf I talked to someone named Brittany on the phone, my guess of his or her age would be around 34 or 33. The graph indicates that in 1990, this name peaked at around 32k. The individual I spoke with may therefore be in their 30s. After 1990, this name gradually became less common. In a comparable way, I wouldn’t guess that someone with this name is older than 50 because, based on the provided graphs, no one had this name in 1970.\n\n\nRead and format data\n# Include and execute your code here\nbrittany_data = df[df['name'] == 'Brittany']\nfig = px.bar(brittany_data, x='year', y='Total', title='Age Distribution for Brittany')\nfig.show()\n\n\n                                                \n\n\n_",
     "crumbs": [
@@ -143,7 +143,7 @@
   {
     "objectID": "Projects/project1.html#questiontask-3",
     "href": "Projects/project1.html#questiontask-3",
-    "title": "Client Report Project 02",
+    "title": "Unveiling Historical Name Trends",
     "section": "QUESTION|TASK 3",
     "text": "QUESTION|TASK 3\nMary, Martha, Peter, and Paul are all Christian names. From 1920 - 2000, compare the name usage of each of the four names. What trends do you notice?\nComparing the popularity of these four Christian names, we can conclude that Mary was the most popular. A peak of 53k was reached by this name in 1950. Out of these four names, Paul is the second most popular and was very well-known from 1950 to 1970. Paul reached about 25k in 1954. Compared to the other two names, Peter and Martha were not in the trends. But in 1956, there were about 10,000 people with the name Peter. In addition, Martha was named roughly 10,000 in 1947. In summary, after the 1950s, the names mentioned above saw a decline in popularity, and by 2000, they had fallen out of popularity.\n\n\nRead and format data\n# Include and execute your code here\nnames_list = ['Mary', 'Martha', 'Peter', 'Paul']\nselected_names_data = df[df['name'].isin(names_list)]\nselected_names_data = selected_names_data[(selected_names_data['year'] &gt;= 1920) & (selected_names_data['year'] &lt;= 2000)]\nfig = px.line(selected_names_data, x='year', y='Total', color='name', title='Name Usage Comparison (1920 - 2000)')\nfig.show()",
     "crumbs": [
@@ -423,9 +423,9 @@
   {
     "objectID": "Projects/project1.html#questiontask-4",
     "href": "Projects/project1.html#questiontask-4",
-    "title": "Client Report Project 02",
+    "title": "Unveiling Historical Name Trends",
     "section": "QUESTION|TASK 4",
-    "text": "QUESTION|TASK 4\nThink of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?\n_ _\n\n\nRead and format data\n# Include and execute your code here\nmovie_release_year = 1972\nunique_name = 'Vito'\n\nvito_data = df[df['name'] == unique_name]\n\nfig = px.line(vito_data, x='year', y='Total', title=f'Name Usage Over Time for {unique_name}')\nfig.update_layout(\n    shapes=[\n        dict(\n            type='line',\n            x0=movie_release_year,\n            x1=movie_release_year,\n            y0=0,\n            y1=vito_data['Total'].max(),\n            line=dict(color='red', dash='dash'),\n            name='Movie Release Year'\n        )\n    ]\n)\nfig.show()",
+    "text": "QUESTION|TASK 4\nThink of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?\nOne of the characters in the 1972 film “The Godfather” was called Vito. There were  persons named Vito in 19. But by 1940, things had drastically changed, and the data had reached _. In 1972, this name was only used by . Vito’s name began to progressively fade after the film’s release. _\n\n\nRead and format data\n# Include and execute your code here\nmovie_release_year = 1972\nunique_name = 'Vito'\n\nvito_data = df[df['name'] == unique_name]\n\nfig = px.line(vito_data, x='year', y='Total', title=f'Name Usage Over Time for {unique_name}')\nfig.update_layout(\n    shapes=[\n        dict(\n            type='line',\n            x0=movie_release_year,\n            x1=movie_release_year,\n            y0=0,\n            y1=vito_data['Total'].max(),\n            line=dict(color='red', dash='dash'),\n            name='Movie Release Year'\n        )\n    ]\n)\n\nfig.add_annotation(\n    x=movie_release_year,\n    y=vito_data['Total'].max(),\n    text='Movie Release year \\'1972\\'',\n    showarrow=True,\n    arrowhead=2,\n    arrowcolor='red',\n    ax=0,\n    ay=-40\n)\nfig.show()",
     "crumbs": [
       "DS250 Projects",
       "Project 1"
