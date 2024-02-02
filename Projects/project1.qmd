@@ -1,7 +1,7 @@
 ---
-title: "Client Report - [Insert Project Title]"
+title: "Client Report Project 02"
 subtitle: "Course DS 250"
-author: "[STUDENT NAME]"
+author: "Aayush Khanal"
 format:
   html:
     self-contained: true
@@ -36,157 +36,132 @@ import plotly.express as px
 
 ## Elevator pitch
 
-_paste your elevator pitch here_
-_A SHORT (4-5 SENTENCES) PARAGRAPH THAT `DESCRIBES KEY INSIGHTS` TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS._
+_The analysis of name usage trends revealed fascinating insights into the popularity of selected names over the years.Examining the historical data for names such as Mary, Martha, Peter, and Paul from 1920 to 2000 showcased distinct patterns. While Mary maintained consistent popularity, Martha experienced a decline, and Peter and Paul exhibited fluctuations. Additionally, a closer look at the name 'Vito' aligned with the release of the movie "The Godfather" in 1972, indicating a notable surge in popularity around that time. _
 
 ```{python}
 #| label: project data
 #| code-summary: Read and format project data
 # Include and execute your code here
-df = pd.read_csv("https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/byuidatascience/data4names/master/data-raw/names_year/names_year.csv")
 ```
 
-__Highlight the Questions and Tasks__
+
 
 ## QUESTION|TASK 1
 
-__COPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE__
+__How does your name at your birth year compare to its use historically?__
 
-_type your results and analysis here_
+_My name is Aayush. Because the name is well-known in other parts of the world, it sticks out. The data indicates that it hasn't been used all that much. When I was born in 2004, there were 39 babies with the name Aayush. Although historically very few people have used the name Aayush, its use peaked in 2010 with 49 people using it. My name was not very common before 2001._
 
 ```{python}
 #| label: Q1
 #| code-summary: Read and format data
 # Include and execute your code here
+# pd.unique(df.query('name == "Aayush"').year).size
+aayush_data = df[df['name'] == 'Aayush']
 
+# Plot the historical usage of the name
+fig = px.line(aayush_data, x='year', y='Total', title='Historical Usage of the Name Aayush')
 
-```
-
-_include figures in chunks and discuss your findings in the figure._
-
-```{python}
-#| label: Q1 chart
-#| code-summary: plot example
-#| fig-cap: "My useless chart"
-#| fig-align: center
-# Include and execute your code here
-chart = px.bar(df.head(200),
-    x="name", 
-    y="AK"
+# Add a vertical line for your birth year
+your_birth_year = 2004  
+fig.add_shape(
+    dict(
+        type='line',
+        x0=your_birth_year,
+        x1=your_birth_year,
+        y0=0,
+        y1=aayush_data['Total'].max(),
+        line=dict(color='red', dash='dash'),
+        name='Your Birth Year'
+    )
 )
-chart.show()
+
+fig.add_annotation(
+    x=your_birth_year,
+    y=aayush_data['Total'].max(),
+    text='Birth Year \'2004\'',
+    showarrow=True,
+    arrowhead=2,
+    arrowcolor='red',
+    ax=0,
+    ay=-40
+)
+
+fig.show()
 ```
 
-
-```{python}
-#| label: Q1 table
-#| code-summary: table example
-#| tbl-cap: "Not much of a table"
-#| tbl-cap-location: top
-# Include and execute your code here
-mydat = df.head(1000)\
-    .groupby('year')\
-    .sum()\
-    .reset_index()\
-    .tail(10)\
-    .filter(["year", "AK","AR"])
-
-display(mydat)
-
-```
 
 
 ## QUESTION|TASK 2
 
-__COPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE__
+__If you talked to someone named Brittany on the phone, what is your guess of his or her age? What ages would you not guess?__
 
-_type your results and analysis here_
+_If I talked to someone named Brittany on the phone, my guess of his or her age would be around 34 or 33. The graph indicates that in 1990, this name peaked at around 32k. The individual I spoke with may therefore be in their 30s. After 1990, this name gradually became less common. In a comparable way, I wouldn't guess that someone with this name is older than 50 because, based on the provided graphs, no one had this name in 1970._
 
 ```{python}
 #| label: Q2
 #| code-summary: Read and format data
 # Include and execute your code here
-
-
-```
-
-_include figures in chunks and discuss your findings in the figure._
-
-```{python}
-#| label: Q2 chart
-#| code-summary: plot example
-#| fig-cap: "My useless chart"
-#| fig-align: center
-# Include and execute your code here
-chart = px.bar(df.head(200),
-    x="name", 
-    y="AK"
-)
-chart.show()
-```
-
-
-```{python}
-#| label: Q2 table
-#| code-summary: table example
-#| tbl-cap: "Not much of a table"
-#| tbl-cap-location: top
-# Include and execute your code here
-mydat = df.head(1000)\
-    .groupby('year')\
-    .sum()\
-    .reset_index()\
-    .tail(10)\
-    .filter(["year", "AK","AR"])
-
-display(mydat)
+brittany_data = df[df['name'] == 'Brittany']
+fig = px.bar(brittany_data, x='year', y='Total', title='Age Distribution for Brittany')
+fig.show()
 
 ```
 
+_
 
 ## QUESTION|TASK 3
 
-__COPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE__
+__Mary, Martha, Peter, and Paul are all Christian names. From 1920 - 2000, compare the name usage of each of the four names. What trends do you notice?__
 
-_type your results and analysis here_
+_Comparing the popularity of these four Christian names, we can conclude that Mary was the most popular. A peak of 53k was reached by this name in 1950. Out of these four names, Paul is the second most popular and was very well-known from 1950 to 1970. Paul reached about 25k in 1954. Compared to the other two names, Peter and Martha were not in the trends. But in 1956, there were about 10,000 people with the name Peter. In addition, Martha was named roughly 10,000 in 1947. In summary, after the 1950s, the names mentioned above saw a decline in popularity, and by 2000, they had fallen out of popularity._
 
 ```{python}
 #| label: Q3
 #| code-summary: Read and format data
 # Include and execute your code here
+names_list = ['Mary', 'Martha', 'Peter', 'Paul']
+selected_names_data = df[df['name'].isin(names_list)]
+selected_names_data = selected_names_data[(selected_names_data['year'] >= 1920) & (selected_names_data['year'] <= 2000)]
+fig = px.line(selected_names_data, x='year', y='Total', color='name', title='Name Usage Comparison (1920 - 2000)')
+fig.show()
 
 
 ```
 
-_include figures in chunks and discuss your findings in the figure._
+
+
+
+## QUESTION|TASK 4
+
+__Think of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?__
+
+_ _
 
 ```{python}
-#| label: Q3 chart
-#| code-summary: plot example
-#| fig-cap: "My useless chart"
-#| fig-align: center
+#| label: Q4
+#| code-summary: Read and format data
 # Include and execute your code here
-chart = px.bar(df.head(200),
-    x="name", 
-    y="AK"
+movie_release_year = 1972
+unique_name = 'Vito'
+
+vito_data = df[df['name'] == unique_name]
+
+fig = px.line(vito_data, x='year', y='Total', title=f'Name Usage Over Time for {unique_name}')
+fig.update_layout(
+    shapes=[
+        dict(
+            type='line',
+            x0=movie_release_year,
+            x1=movie_release_year,
+            y0=0,
+            y1=vito_data['Total'].max(),
+            line=dict(color='red', dash='dash'),
+            name='Movie Release Year'
+        )
+    ]
 )
-chart.show()
-```
-
-
-```{python}
-#| label: Q3 table
-#| code-summary: table example
-#| tbl-cap: "Not much of a table"
-#| tbl-cap-location: top
-# Include and execute your code here
-mydat = df.head(1000)\
-    .groupby('year')\
-    .sum()\
-    .reset_index()\
-    .tail(10)\
-    .filter(["year", "AK","AR"])
-
-display(mydat)
+fig.show()
 
 ```
