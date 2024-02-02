@@ -136,7 +136,7 @@ fig.show()
 
 __Think of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?__
 
-_One of the characters in the 1972 film "The Godfather" was called Vito. There were __ persons named Vito in 19__. But by 1940, things had drastically changed, and the data had reached ____. In 1972, this name was only used by __.  Vito's name began to progressively fade after the film's release. _
+_One of the characters in the 1972 film "The Godfather" was called Vito. There were 300 persons named Vito in 1925. But by 1940, things had drastically changed, and the data had reached 95. In 1972, this name was only used by 95.  Vito's name began to progressively fade after the film's release._
 
 ```{python}
 #| label: Q4
