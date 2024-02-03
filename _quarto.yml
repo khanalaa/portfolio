@@ -47,7 +47,7 @@ website:
           file: projects.qmd
         - text: "---"
         - text: "Project 1"
-          file: project1.qmd
+          file: Projects/project1.qmd
         - text: "---"
         - text: "Project 2"
           file: Projects/project2.qmd
