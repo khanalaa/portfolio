@@ -50,7 +50,7 @@ website:
           file: Projects/project1.qmd
         - text: "---"
         - text: "Project 2"
-          file: /Projects/project1.qmd
+          file: Projects/project2.qmd
         - text: "---"
         - text: "Project 3"
           file: Projects/project3.qmd
