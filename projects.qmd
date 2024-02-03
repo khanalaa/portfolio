@@ -7,7 +7,7 @@ subtitle: "Repo for all my Projects"
 # DS250 Projects
 ## Repo for all my Projects
 
-- [Project 1](/Projects/project2.qmd)
+- [Project 1](/Projects/project1.qmd)
 - [Project 2](/Projects/project2.qmd)
 - [Project 3](/Projects/project3.qmd)
 - [Project 4](/Projects/project4.qmd)
